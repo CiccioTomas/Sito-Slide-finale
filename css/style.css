@@ -1,0 +1,112 @@
+ body {
+    margin: 0;
+     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+     
+     background-color: #cfcfcf; 
+    color: #000;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+
+}
+
+header {
+    flex-direction: row;
+    background-color: #2b2b2b;
+    color: #fff;
+    text-align: center;
+    padding: 50px 0px;
+    font-size: clamp(20px, 4vw, 50px);
+    text-transform: uppercase;
+    display: grid;   /* Grid a volte è più preciso di Flex per un singolo testo */
+    place-items: center; 
+    width: 100%;
+    margin: 0;
+}
+
+.feature {
+    position: relative; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    min-height: 80vh; 
+    padding: 100px 50px ;
+    overflow: hidden;
+}
+
+.icon-box {
+    position: absolute; 
+    z-index: 1; 
+    width: 70vw;
+    max-width: 1000px; 
+    opacity: 0.1; 
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    mix-blend-mode: multiply;
+}
+
+.icon-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.text-box {
+    position: relative;
+    z-index: 2;
+    text-align: left;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 96px;
+    padding: 0 200px;
+}
+
+.text-box h2 {
+    font-size: clamp(20px, 4vw, 55px);
+    text-align: left;
+}
+
+.text-box p {
+    font-size: clamp(10px, 1.8vw, 20px);
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .text-box {
+        flex-direction: column; 
+        gap: 0px; 
+        padding: 0px 70px;
+        text-align: center;
+    }
+    .text-box h2, .text-box p {
+        text-align: center; 
+        flex: none;
+        width: 100%;
+    }
+    .feature {
+        padding: 0px 20px;
+    }
+
+}
+
+footer {
+    flex-direction: row;
+    background-color: #2b2b2b;
+    color: #fff;
+    text-align: center;
+    padding: 50px 0px;
+    font-size: clamp(20px, 4vw, 70px);
+    text-transform: uppercase;
+    display: grid;
+    place-items: center; 
+    width: 100%;
+    margin: 0;
+}
+
+
+
+
